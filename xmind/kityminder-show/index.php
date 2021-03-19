@@ -72,7 +72,7 @@ session_start();
 <script type="text/javascript" src="dist/kityminder.core.js"></script>
 <script>
 	// global var	
-	var host = "http://localhost:8888";
+	var host = "http://bertonhsu.com";
 	var endpoint = "/mind-back/public/api";
 	// 创建 km 实例
 	/* global kityminder */
@@ -90,7 +90,6 @@ session_start();
 			alert("載入失敗");
 		},
 		success: function(data) {
-			console.log(data.data);
 			// mindArray = JSON.parse(data);
 			document.title = data.data.root.data.text;
 			km.importData('json', JSON.stringify(data.data));

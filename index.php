@@ -29,7 +29,7 @@
 		$(document).ready(function() {
 			getMinds();
 		});
-		var host = "http://localhost:8888";
+		var host = "http://bertonhsu.com";
 		var endpoint = "/mind-back/public/api";
 		// 獲取所有心智圖
 		function getMinds() {

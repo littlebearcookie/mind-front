@@ -6,4 +6,4 @@
 
 ## **DEMO**
 
-[Live Demo](https://littlebearcookie.github.io/fun-tree/)
+[Live Demo](http://bertonhsu.com/mind-front/index.php)

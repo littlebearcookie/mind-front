@@ -95,7 +95,7 @@ session_start();
 
 <script>
 	// global var	
-	var host = "http://localhost:8888";
+	var host = "http://bertonhsu.com";
 	var endpoint = "/mind-back/public/api";
 	angular.module('kityminderDemo', ['kityminderEditor'])
 		.controller('MainController', function($scope) {
@@ -126,14 +126,14 @@ session_start();
 			};
 		});
 	//儲存
-	function xmind_sava() {
+	function saveMind() {
 		var mindOut = editor.minder.exportJson(); //心智圖輸出
 		var id = "<?php echo $_GET['id']; ?>";
 		// 編輯
 		if (id != "new") {
 			$.ajax({
 				type: "PUT",
-				url: "http://localhost:8888/mind-back/public/api/minds/" + id,
+				url: host + endpoint + "/minds/" + id,
 				cache: true,
 				data: {
 					MindOut: mindOut,
@@ -170,7 +170,7 @@ session_start();
 		}
 	}
 	// 關閉
-	function xmind_close() {
+	function closeMind() {
 		window.close();
 	}
 </script>
